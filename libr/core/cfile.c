@@ -771,7 +771,7 @@ R_API bool r_core_bin_load(RCore *r, const char *filenameuri, ut64 baddr) {
 	if (info && info->type) {
 		is_core = strstr (info->type, "CORE");
 	}
-	r_bin_info_free (inf);
+	r_bin_info_free (info);
 	// the bintypecore is a wrong callback that is used only by ELF and must be deprecated. info should be in RBinInfo instead
 	// if type == R_BIN_TYPE_CORE, we need to create all the maps
 	if (plugin && binfile && is_core) {

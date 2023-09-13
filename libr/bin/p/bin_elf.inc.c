@@ -10,6 +10,7 @@
 
 static RBinInfo* info(RBinFile *bf);
 
+#if 0
 static int get_file_type(RBinFile *bf) {
 	ELFOBJ *eo = bf->bo->bin_obj;
 	char *type = Elf_(get_file_type (eo));
@@ -17,6 +18,7 @@ static int get_file_type(RBinFile *bf) {
 	free (type);
 	return res;
 }
+#endif
 
 static RList *maps(RBinFile *bf) {
 	r_return_val_if_fail (bf && bf->bo, NULL);
